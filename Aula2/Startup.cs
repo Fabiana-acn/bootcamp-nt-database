@@ -7,6 +7,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using ProjetoWeb.Adapters;
+using ProjetoWeb.Bordas.Adapter;
+using ProjetoWeb.Bordas.Repositorios;
+using ProjetoWeb.Bordas.UseCases;
+using ProjetoWeb.Repositorio;
+using ProjetoWeb.UseCase;
 using System;
 
 namespace Aula2
@@ -29,6 +35,14 @@ namespace Aula2
 
             services.AddScoped<IProdutoService, ProdutoService>();
             services.AddScoped<IPedidoService, PedidoService>();
+            services.AddScoped<ICriarPlantaUseCase, CriarPlantaUseCase>();
+            services.AddScoped<IEditarPlantaUseCase, EditarPlantaUseCase>();
+            services.AddScoped<IDeletarPlantaUseCase, DeletarPlantaUseCase>();
+            services.AddScoped<ILerPorIdPlantaUseCase, LerPorIdPlantaUseCase>();
+            services.AddScoped<ILerTodosPlantaUseCase, LerTodosPlantaUseCase>();
+
+            services.AddScoped<IPlantaRepositorio, PlantaRepositorio>();
+            services.AddScoped<IPlantaAdapter, PlantaAdapter>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

@@ -98,6 +98,33 @@ namespace Aula2.Migrations
                     b.ToTable("PedidoItems");
                 });
 
+            modelBuilder.Entity("Aula2.Entities.Planta", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("categoria")
+                        .HasColumnType("text");
+
+                    b.Property<string>("cor")
+                        .HasColumnType("text");
+
+                    b.Property<string>("descricao")
+                        .HasColumnType("text");
+
+                    b.Property<string>("especie")
+                        .HasColumnType("text");
+
+                    b.Property<string>("nome")
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Plantas");
+                });
+
             modelBuilder.Entity("Aula2.Entities.Produto", b =>
                 {
                     b.Property<int>("id")

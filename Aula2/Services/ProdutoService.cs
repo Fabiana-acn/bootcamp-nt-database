@@ -1,6 +1,7 @@
 ﻿using Aula2.Context;
 using Aula2.Entities;
 using Microsoft.EntityFrameworkCore;
+using ProjetoWeb.DTO.Produto.Editar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace Aula2.Services
         public bool AdicionarProduto(Produto produto)
         {
             _local.Produtos.Add(produto);//adicionando produto
-            _local.SaveChanges();//comitrar
+            _local.SaveChanges();//comitar
             return true;
         }
 
@@ -31,6 +32,11 @@ namespace Aula2.Services
             _local.Entry(novoProduto).State = EntityState.Modified;
             _local.SaveChanges();
             return true;
+        }
+
+        public bool AtualizarProduto(EditarProdutoRequest editarProduto)
+        {
+            throw new NotImplementedException();
         }
 
         public bool DeletarProduto(int id)

@@ -2,6 +2,8 @@
 using Aula2.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ProjetoWeb.DTO.Pedido.Deletar;
+using ProjetoWeb.DTO.Produto.Criar;
 
 namespace Aula2.Controllers
 {
@@ -38,7 +40,15 @@ namespace Aula2.Controllers
         [HttpPost("Criar")]
         public IActionResult Post([FromBody] Pedido novoPedido)
         {
-            return Ok(_pedido.AdicionarPedido(novoPedido));
+            try
+            {
+                return Ok(_pedido.AdicionarPedido(novoPedido));
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest(new CriarPedidoResponse() { msg = ex.Message });
+            }
+            
         }
 
         [HttpPut("Editar")]
@@ -51,11 +61,22 @@ namespace Aula2.Controllers
         [HttpDelete("Deletar/{id}")]
         public IActionResult Delete(int id)
         {
-            return Ok(_pedido.DeletarPedido(id));
+            try
+            {
+                if (_pedido.DeletarPedido(id))
+                {
+                    var response = new DeletarPedidoResponse() { id = id, Msg = "Excluido com Sucesso!" };
+                    return Ok(response);
+                }else
+                {
+                    throw new System.Exception("Falha ao Excluir!");
+                }
+            }
+            catch (System.Exception ex)
+            {
+                var response = new DeletarPedidoResponse() { id = id, Msg = ex.Message };
+                return BadRequest(response);
+            }
         }
-
-
-
-
     }
 }

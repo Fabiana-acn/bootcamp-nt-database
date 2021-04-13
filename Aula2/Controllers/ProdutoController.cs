@@ -2,6 +2,7 @@
 using Aula2.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ProjetoWeb.DTO.Produto.Editar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,9 +47,9 @@ namespace Aula2.Controllers
         }
 
         [HttpPut("Editar")]
-        public IActionResult ProdutoUpdate([FromBody] Produto novoProduto)
+        public IActionResult ProdutoUpdate([FromBody] EditarProdutoRequest editarProduto)
         {
-            return Ok(_produto.AtualizarProduto(novoProduto));
+            return Ok(_produto.AtualizarProduto(editarProduto));
         }
 
 

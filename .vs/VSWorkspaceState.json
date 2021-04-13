@@ -2,12 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Aula2",
-    "\\Aula2\\Context",
-    "\\Aula2\\Controllers",
-    "\\Aula2\\Entities",
-    "\\Aula2\\Migrations",
-    "\\Aula2\\Services"
+    "\\Aula2\\DTO",
+    "\\Aula2\\DTO\\Produto"
   ],
-  "SelectedNode": "\\Aula2.sln",
+  "SelectedNode": "\\Aula2\\DTO\\Produto\\Criar",
   "PreviewInSolutionExplorer": false
 }

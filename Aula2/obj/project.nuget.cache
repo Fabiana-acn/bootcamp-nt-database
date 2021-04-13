@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4CkJfPhT3nG8eCDNFimxAW3zZdb03l0YLjNgD4TTt9qpPFmPgXH9+26/JhBQ3fziQrhNWWF8v0cPgks5n43cwA==",
+  "dgSpecHash": "SXBOu86IsRK4wMuTJvWTpInn0YXxjusjjMNAaw2XjBBuXAoSY6wjvF9tILMgLU9PjiSpFJUDjDxU42ZOk6o8Zw==",
   "success": true,
-  "projectFilePath": "C:\\Estudos\\squadraNewThinkers\\bootcamp-nt-database\\Aula2\\Aula2.csproj",
+  "projectFilePath": "C:\\Estudos\\squadraNewThinkers\\bootcamp-nt-database\\Aula2\\ProjetoWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fabia\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\fabia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

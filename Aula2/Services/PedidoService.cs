@@ -19,7 +19,7 @@ namespace Aula2.Services
         public bool AdicionarPedido(Pedido pedido)
         {
             _local.Pedidos.Add(pedido);//adicionando Pedido
-            _local.SaveChanges();//comitrar
+            _local.SaveChanges();//comitar no bb
             return true;
         }
 

@@ -4,6 +4,6 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <ActiveDebugProfile>Aula2</ActiveDebugProfile>
+    <ActiveDebugProfile>WebHost</ActiveDebugProfile>
   </PropertyGroup>
 </Project>

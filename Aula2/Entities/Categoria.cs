@@ -12,5 +12,5 @@ namespace Aula2.Entities
         public int Id { get; set; }
         public string Descricao { get; set; }
 
-          }
+    }
 }

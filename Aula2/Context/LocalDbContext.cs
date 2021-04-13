@@ -8,12 +8,13 @@ namespace Aula2.Context
         public LocalDbContext(DbContextOptions<LocalDbContext> opt) : base(opt) { //construtor
         
         }
-    
-        public DbSet<Produto> Produtos {get;set;}
+        //mapeando
+       public DbSet<Produto> Produtos {get;set;}
        public DbSet<Categoria> Categorias { get; set; }
        public DbSet<Marca> Marcas { get; set; }
        public DbSet<Pedido> Pedidos { get; set; }
        public DbSet<PedidoItem> PedidoItems { get; set; }
+       public DbSet<Planta> Plantas { get; set; }
        
         //criar relaçoes modelando tabela
         protected override void OnModelCreating(ModelBuilder modelBuilder)
