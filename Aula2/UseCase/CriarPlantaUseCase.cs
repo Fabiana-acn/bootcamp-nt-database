@@ -25,19 +25,19 @@ namespace ProjetoWeb.UseCase
             {
                 if (request.nome.Length < 20)
                 {
-                    response.msg = "Erro ao adicionar o planta";
+                    response.Msg = "Erro ao adicionar o planta";
                     return response;
                 }
 
                 var produtoAdicionar = _adapter.ConverterCriarRequestParaPlanta(request);
                 var id = _repositorioPlanta.Add(produtoAdicionar);
-                response.msg = "Planta adicionado com sucesso";
-                response.id = produtoAdicionar.id;
+                response.Msg = "Planta adicionado com sucesso";
+                response.Id = produtoAdicionar.id;
                 return response;
             }
             catch
             {
-                response.msg = "Erro ao adicionar o planta";
+                response.Msg = "Erro ao adicionar o planta";
                 return response;
 
             }
